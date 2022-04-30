@@ -34,7 +34,7 @@ Limits
 The maximum size you can enter is 65535.99, which the calculator rounds to 
 65504.0.  If you enter 65535.999, the result is Infinity.
 The maximum negative number you can enter is -65535.99, which is rounded to
-65504.0.
+-65504.0.
 The minimum number you can enter is 0.0000001 (6 zeros in front of the 1)
 which displays as 1.1920929E-7.
 
