@@ -1,0 +1,64 @@
+L5BCalculator Users Guide
+
+Welcome to the L5B Calculator!  This guide will helpfully make things easier
+to use and understand.  
+
+Reverse Polish Notation
+=======================
+First, you need to understand that this uses Reverse Polish Notation.  So instead
+of entering: 2 + 2 =, you would do: 2 [ENTER] 2 [ENTER] + =.
+
+Entering Numbers
+=============
+There is a box at the top of the screen that you can type into.  Or you can use
+the number buttons for input.  You have to press [ENTER] to put the number on the 
+stack.  
+
+Entering the Operation
+======================
+When you are done entering the numbers, then push the operation, which is one of
++ - / * REM SQRT.
+
+Executing the Operation
+=======================
+Now press the = button to get the result.  This will display in the message line
+below the input box. 
+
+16-Bit Half Float
+=================
+This calculator uses 16-bit HalfFloat, which can produce some interesting result.
+For example: 1 + 1 = 2.000244
+
+Limits
+======
+The maximum size you can enter is 65535.99, which the calculator rounds to 
+65504.0.  If you enter 65535.999, the result is Infinity.
+The maximum negative number you can enter is -65535.99, which is rounded to
+65504.0.
+The minimum number you can enter is 0.0000001 (6 zeros in front of the 1)
+which displays as 1.1920929E-7.
+
+Examples
+========
+1 ENTER 1 ENTER + = -> 2.000244
+2 ENTER 3 ENTER - = -> -1.000122
+10000 ENTER SQRT = -> 100.0
+63 ENTER 9 ENTER / = -> 
+
+Computer Registers
+=================
+There are 6 boxes at the bottom of the screen, 2 in the first row and 
+4 in the next.
+
+The first box, called IN, is the Input from the user.  This is always 
+zero, because the contents are immediately moved to A.  (In a future version
+this may be removed).
+The 2nd box in the first row is called D. This contains the bytecode
+of the next operation that will be executed.
+The bottom row contains the stack, in boxes A, B, and C.  The value displayed
+is the hexadecimal value of the 16-bit number that is there.  When numbers
+are entered, the contents of A moves to B and B moves to C.
+The last box, E, is the last operation entered.  So D moves to E. (This 
+doesn't seem too useful and it may be removed).
+
+
